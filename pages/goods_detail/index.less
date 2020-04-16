@@ -1,0 +1,103 @@
+// @maincolor: red;
+.goodsSwiper {
+  width: 100vw;
+  height: 100vw;
+  &Image {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+.info {
+  padding: 30rpx;
+  &Head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10rpx;
+    &Left {
+      color: var(--mainColor);
+      &::before {
+        content: '￥';
+        font-size: 80%;
+      }
+    }
+    &Right {
+      color: var(--fadeColor);
+      display: flex;
+      align-items: center;
+      .iconfont {
+        font-size: 40rpx;
+        margin: 10rpx;
+        position: relative;
+        .shareBtn {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.detail {
+  &Body {
+    margin-bottom: 94rpx;
+    font-size: 0;
+    background-color: var(--bgColor);
+  }
+  &Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx 0;
+  }
+}
+
+.bottomBar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 94rpx;
+  &Icon {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: var(--fadeColor);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .contactBtn {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+    &Text {
+      font-size: 20rpx;
+    }
+  }
+  &Btn {
+    width: 196rpx;
+    height: 60rpx;
+    color: #fff;
+    border-radius: 30rpx;
+    display: flex;
+    margin-right: 10rpx;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--warnColor);
+    &:last-child {
+      background-color: var(--dangerColor);
+    }
+  }
+}

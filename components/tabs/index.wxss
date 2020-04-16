@@ -1,0 +1,22 @@
+.tabsTitle {
+  display: flex;
+}
+.tabsTitleItem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.tabsTitle .active {
+  font-weight: 700;
+  position: relative;
+}
+.tabsTitle .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 5rpx;
+  width: 80%;
+  background-color: var(--mainColor);
+}

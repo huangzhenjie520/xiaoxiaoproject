@@ -1,0 +1,64 @@
+.tabsTitle {
+  display: flex;
+}
+
+.tabsTitleItem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.tabsTitle .active {
+  font-weight: 700;
+  position: relative;
+}
+
+.tabsTitle .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 5rpx;
+  width: 80%;
+  background-color: #eb4450;
+}
+
+.goods {
+  display: flex;
+  margin: 15rpx;
+}
+
+.goodsImage {
+  width: 190rpx;
+  height: 190rpx;
+  background-color: #ccc;
+  margin-right: 15px;
+}
+
+.goodsInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+
+.goodsName {
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.goodsPrice {
+  font-size: 24rpx;
+  color: #eb4450;
+}
+
+.goodsPrice::before {
+  content: "￥";
+  font-size: 80%;
+}

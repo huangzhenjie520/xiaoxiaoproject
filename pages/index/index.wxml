@@ -1,0 +1,55 @@
+<search />
+<swiper 
+class="indexSwiper" 
+circular
+autoplay 
+indicator-dots
+indicator-color="rgba(255,255,255,.3)" 
+indicator-active-color="#fff"  >
+  <swiper-item 
+  wx:for="{{ swiperList }}"
+  wx:key="goods_id"
+  class="indexSwiperItem">
+  <navigator url="{{ item.navigator_url }}" open-type="{{ item.open_type }}">
+    <image class="indexSwiperImage" src="{{ item.image_src }}" mode="aspectFit" />
+  </navigator>   
+  </swiper-item>
+</swiper>
+<view class="indexNav">
+  <navigator hover-class="none" url="{{ item.navigator_url || '/pages/search/index?query='+item.name}}" wx:for="{{navList}}" wx:key="name" open-type="{{item.open_type || 'navigate'}}">
+    <image class="indexNavImage" src="{{item.image_src}}" mode="aspectFit"/>
+  </navigator>
+</view>
+<!-- 楼层 -->
+<view 
+class="floor" 
+wx:for="{{ floorList }}" 
+wx:key="id">
+  <view class="floorTitle">
+    <image class="floorTitleImage" src="{{ item.floor_title.image_src }}" mode="aspectFit"/>
+      
+  </view>
+  <view class="floorMain">
+    <image 
+    wx:for="{{ item.product_list }}"
+    wx:key="name" 
+    wx:for-item="item2"
+    class="floorMainImage" 
+    src="{{ item2.image_src }}"
+    style="width:{{ item2.image_width }}rpx" 
+    bindtap="goToPageList"
+    data-url="{{ item2.navigator_url }}"
+    data-type="{{ item2.open_type }}"
+    />
+      
+  </view>
+    
+    
+</view>
+<view hidden="{{ !showTop }}">
+  
+  <toTop></toTop>
+</view>
+  
+  
+  

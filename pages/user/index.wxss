@@ -1,0 +1,49 @@
+.avatar {
+  height: 330rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.avatarImage {
+  width: 172rpx;
+  height: 172rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatarname {
+  color: #fff;
+}
+.avatarBg {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  filter: blur(20rpx);
+  z-index: -1;
+}
+.authBtn {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+page {
+  background-color: var(--bgColor);
+}
+.order {
+  background-color: #fff;
+  height: 144rpx;
+  border-radius: 15rpx;
+  margin: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.orderItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

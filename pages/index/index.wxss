@@ -1,0 +1,39 @@
+.indexSwiper .indexSwiperImage {
+  width: 750rpx;
+  height: 340rpx;
+}
+.indexNav {
+  display: flex;
+  padding: 20rpx 0;
+}
+.indexNav navigator {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.indexNavImage {
+  width: 128rpx;
+  height: 140rpx;
+}
+.floorTitle {
+  background-color: #fff;
+  margin: 10rpx 0;
+}
+.floorTitleImage {
+  width: 100%;
+  height: 60rpx;
+}
+.floorMainImage {
+  float: left;
+  width: 232rpx;
+  height: 188rpx;
+  margin: 0 0 12rpx 15rpx;
+}
+.floorMainImage:nth-child(1) {
+  width: 232rpx;
+  height: 386rpx;
+}
+image {
+  background-color: #eee;
+}

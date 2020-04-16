@@ -1,0 +1,13 @@
+<navigator 
+  class="goods"
+  url="/pages/goods_detail/index?goods_id={{ item.goods_id }}">
+    <image class="goodsImage" src="{{ item.goods_image }}" />
+    <view class="goodsInfo">
+      <view class="goodsName">
+        {{ item.goods_name }}
+      </view>
+      <view class="goodsPrice">
+        {{ item.goods_price }}
+      </view>
+    </view>
+  </navigator>

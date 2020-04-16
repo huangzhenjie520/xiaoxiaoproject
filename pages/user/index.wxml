@@ -1,0 +1,29 @@
+<view class="avatar">
+  <image class="avatarBg" src="{{userInfo.avatarUrl||'/images/icons/touxiang.svg'}}" mode="aspectFill" />
+  <image class="avatarImage" src="{{userInfo.avatarUrl||'/images/icons/touxiang.svg'}}" mode="aspectFit" />
+
+  <text class="avatarName">{{userInfo.nickName || '点击登录'}}</text>
+  <block if="{{ !userInfo.nickName }}">
+    <auth class="authBtn" bindupDataUserInfo="upDataUserInfo"></auth>
+  </block>
+</view>
+<view class="order">
+  <navigator url="/pages/order/index?type=2" class="orderItem">
+    <view class="iconfont icon-daifukuai"></view>
+    <view>待付款</view>
+  </navigator>
+  <navigator url="/pages/order/index?type=3" class="orderItem">
+    <view class="iconfont icon-daifukuai"></view>
+    <view>待收货</view>
+  </navigator>
+  <navigator class="orderItem">
+    <view class="iconfont icon-daifukuai"></view>
+    <view>退货/退款</view>
+  </navigator>
+  <navigator url="/pages/order/index?type=1" class="orderItem">
+    <view class="iconfont icon-daifukuai"></view>
+    <view>全部订单</view>
+  </navigator>
+</view>
+  
+  

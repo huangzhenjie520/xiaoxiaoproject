@@ -1,0 +1,30 @@
+<search></search>
+<view class="tabs">
+  <view class="tabsTitle">
+    <view
+      wx:for="{{ tabs }}"
+      wx:key="id"
+      class="tabsTitleItem {{ activeIndex === index ? 'active' : '' }}"
+      bindtap="changeTabIndex"
+      data-index="{{ index }}"
+    >
+      {{ item.text }}
+    </view>
+  </view>
+</view>
+<view class="goodsList">
+  <navigator 
+  wx:for="{{ goodsList }}" wx:key="goods_id" 
+  wx:if="{{ item.goods_price }}" class="goods"
+  url="/pages/goods_detail/index?goods_id={{ item.goods_id }}">
+    <image class="goodsImage" src="{{ item.goods_small_logo }}" />
+    <view class="goodsInfo">
+      <view class="goodsName">
+        {{ item.goods_name }}
+      </view>
+      <view class="goodsPrice">
+        {{ item.goods_price }}
+      </view>
+    </view>
+  </navigator>
+</view>

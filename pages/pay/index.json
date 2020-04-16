@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "支付",
+  "usingComponents": {
+    "goods-item": "/components/goods-item/index"
+  }
+}

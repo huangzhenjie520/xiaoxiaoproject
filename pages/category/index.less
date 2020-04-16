@@ -1,0 +1,65 @@
+.main {
+  background-color: #ccc;
+  display: flex; // height: ~'calc(100vh - 100rpx)';
+  &Left {
+    width: 182rpx;
+    background-color: #f3f3f3;
+    height: ~'calc(100vh - 100rpx)';
+    &Item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 19rpx 0;
+    }
+    .active {
+      color: #eb4450;
+      position: relative;
+      &::before {
+        content: '';
+        width: 5rpx;
+        height: 50rpx;
+        background-color: #eb4450;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+  &Right {
+    flex: 1;
+    height: ~'calc(100vh - 100rpx)';
+    background-color: #fff;
+    &Title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20rpx 0;
+      &::before,
+      &::after {
+        content: '/';
+        color: #999;
+        margin: 0 20rpx;
+      }
+    }
+    &List {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &Item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 33.33%;
+      padding: 20rpx 0;
+    }
+    &Image {
+      width: 120rpx;
+      height: 120rpx;
+      background-color: #ccc;
+    }
+    &Text {
+      margin: 10rpx;
+      font-size: 22rpx;
+    }
+  }
+}

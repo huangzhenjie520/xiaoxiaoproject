@@ -1,0 +1,3 @@
+<view class="top" bindtap="goToTop">
+  顶部
+</view>

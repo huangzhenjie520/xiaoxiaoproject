@@ -1,0 +1,53 @@
+<!-- 收货地址 已选择和未选择两种状态 -->
+<view class="address" bindtap="getUserAddress">
+  <block wx:if="{{ userAddress.userName }}">
+    <view class="addressDetail">
+      {{ userAddress.detail }}
+    </view>
+    <view class="addressUserinfo">
+      <text space="emsp"
+        >{{ userAddress.userName }} {{}} {{ userAddress.telNumber }}</text
+      >
+    </view>
+  </block>
+  <block wx:else>
+    <view class="addressBtnWrap">
+      <view class="addressBtn">
+        选择地址
+      </view>
+    </view>
+  </block>
+</view>
+<!-- 已选商品 -->
+<view class="choose">
+  <view class="chooseTitle">
+    已选商品
+  </view>
+  <view class="chooseList">
+    <view
+      class="chooseItem"
+      wx:for="{{ cart }}"
+      wx:key="goods_id"
+      wx:if="{{ item.isSelect }}"
+    >
+      <goods-item item="{{ item }}"></goods-item>
+      <view class="chooseItemCount">×{{ item.number }}</view>
+    </view>
+  </view>
+</view>
+<!-- 底部合计 -->
+<view class="bar">
+  <view class="barInfo">
+    <!-- 合计 -->
+    <view class="barTotal">
+      <text class="barTotalTxt">合计</text>
+      <text class="barTotalPrice">{{ totalPrice }}</text>
+    </view>
+  </view>
+  <view
+    class="barBtn {{ userAddress.userName ? '' : 'disabled' }}"
+    bindtap="goToPay"
+  >
+    去支付({{ totalCount }})
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "search": "/components/Search/search"
+  },
+  "navigationBarTitleText": "分类",
+  "disableScroll": true,
+  "enablePullDownRefresh": false
+}

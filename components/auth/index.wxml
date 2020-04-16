@@ -1,0 +1,7 @@
+<!-- 准备一个按钮，
+     1.指定open-type为获取用户信息功能
+     2.绑定专属事件，在事件处理函数中获取用户信息
+-->
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+  微信授权登录
+</button>

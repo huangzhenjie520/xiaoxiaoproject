@@ -1,0 +1,27 @@
+page {
+  background-color: var(--bgColor);
+}
+
+.order {
+  &Item {
+    background-color: #fff;
+    margin-bottom: 20rpx;
+    padding: 20rpx;
+    &Row {
+      margin: 20rpx 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text:nth-child(1) {
+        color: var(--fadeColor);
+      }
+      .price {
+        color: var(--mainColor);
+        &::before {
+          content: '￥';
+          font-size: 80%;
+        }
+      }
+    }
+  }
+}

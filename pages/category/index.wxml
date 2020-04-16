@@ -1,0 +1,36 @@
+<search></search>
+
+<view class="main">
+  <scroll-view scroll-y class="mainLeft">
+    <view
+      class="mainLeftItem {{ activeIndex == index ? 'active' : '' }}"
+      wx:for="{{ cateLeft }}"
+      wx:key="cate_id"
+      bindtap="changeTabIndex"
+      data-index="{{ index }}"
+      >{{item.cat_name}}</view
+    >
+  </scroll-view>
+  <scroll-view scroll-y scroll-top="{{ rightScrollTop }}" class="mainRight">
+    <block 
+    wx:for="{{ cateRight }}"
+    wx:key="car_id"
+    wx:if="{{ item.children }}"
+    >
+    <view class="mainRightTitle">
+      {{ item.cat_name }}
+    </view>
+    <view class="mainRightList">
+      <navigator 
+      class="mainRightItem" 
+      wx:for-item= "item2"
+      url="/pages/goods_list/index?cat_id={{ item2.cat_id }}"
+      wx:for="{{ item.children }}"
+      wx:key="car_id">
+        <image class="mainRightImage" src="{{ item2.cat_icon }}" mode="aspectFit" />
+        <text class="mainRightText">{{item2.cat_name }}</text>
+      </navigator>
+    </view>
+    </block>
+  </scroll-view>
+</view>

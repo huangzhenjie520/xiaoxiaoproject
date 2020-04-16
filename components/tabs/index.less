@@ -1,0 +1,24 @@
+.tabs {
+  &Title {
+    display: flex;
+    &Item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20rpx 0;
+    }
+    .active {
+      font-weight: 700;
+      position: relative;
+    }
+    .active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 5rpx;
+      width: 80%;
+      background-color: var(--mainColor);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.main {
+  background-color: #ccc;
+  display: flex;
+}
+.mainLeft {
+  width: 182rpx;
+  background-color: #f3f3f3;
+  height: calc(100vh - 100rpx);
+}
+.mainLeftItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 19rpx 0;
+}
+.mainLeft .active {
+  color: #eb4450;
+  position: relative;
+}
+.mainLeft .active::before {
+  content: '';
+  width: 5rpx;
+  height: 50rpx;
+  background-color: #eb4450;
+  position: absolute;
+  left: 0;
+}
+.mainRight {
+  flex: 1;
+  height: calc(100vh - 100rpx);
+  background-color: #fff;
+}
+.mainRightTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.mainRightTitle::before,
+.mainRightTitle::after {
+  content: '/';
+  color: #999;
+  margin: 0 20rpx;
+}
+.mainRightList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mainRightItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%;
+  padding: 20rpx 0;
+}
+.mainRightImage {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #ccc;
+}
+.mainRightText {
+  margin: 10rpx;
+  font-size: 22rpx;
+}

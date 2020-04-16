@@ -1,0 +1,75 @@
+<!-- 情况1：购物车有商品的状态 -->
+<block wx:if="{{ cart.length }}">
+  <!-- 购物车列表 -->
+  <view class="cartList">
+    <view class="cartItem" wx:for="{{ cart }}" wx:key="goods_id">
+      <view 
+      class="cartItemLeft" 
+      bindtap="changeSelectItem"
+      data-index="{{ index }}"
+      >
+
+        <!-- <icon class="" type="success" size="23"></icon> -->
+        <view class="iconfont {{ item.isSelect ?'icon-xuanzhong':'icon-xuanze' }}"></view>
+      </view>
+      <view class="cartItemRight">
+        <goods-item item="{{ item }}"/>
+        <view class="cartCount">
+          <view 
+          class="cartCountBtn" 
+          bindtap="changeCount"
+          data-index="{{ index }}"
+          data-number="{{ -1 }}"
+          >
+            -
+          </view>
+          <view class="cartCountNumber">
+            {{ item.number }}
+          </view>
+          <view 
+          class="cartCountBtn" 
+          bindtap="changeCount"
+          data-index="{{ index }}"
+          data-number="{{ 1 }}"
+          >
+            +
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 购物车结算 -->
+  <view class="bar">
+    <view class="barInfo">
+      <!-- 全选按钮 -->
+      <view class="barSelect" bindtap="changeSelectAll">
+        <text class="iconfont {{ selectAll ?'icon-xuanzhong':'icon-xuanze' }}"></text>
+        <text class="barSelectTxt">全选</text>
+      </view>
+        <!-- 合计 -->
+      <view class="barTotal">
+        <text class="barTotalTxt">合计</text>
+        <text class="barTotalPrice">{{ totalPrice }}</text>
+      </view>
+    </view>
+    <view class="barBtn {{ totalCount === 0 ? 'disable':'' }}" bindtap="goToPay">
+          去结算({{ totalCount }})
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class="cartEmpty">
+    <view class="cartEmptyText">
+      购物车空空如也
+    </view>
+    <navigator 
+    class="cartEmptyBtn"
+    url="/pages/index/index"
+    open-type="switchTab">
+      跳转值首页看看
+    </navigator>
+      
+  </view>
+    
+</block>
+  

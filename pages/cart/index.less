@@ -1,0 +1,110 @@
+.iconfont {
+  color: var(--mainColor);
+  font-size: 40rpx;
+  &.icon-xuanzhong {
+    color: var(--mainColor);
+  }
+  &.icon-xuanze {
+    color: var(--fadeColor);
+  }
+}
+
+.cartItem {
+  display: flex;
+  &Left {
+    width: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &Right {
+    flex: 1;
+    position: relative;
+  }
+  .cartCount {
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+    display: flex;
+    align-items: center;
+    &Btn {
+      display: flex;
+      line-height: 30rpx;
+      justify-content: center;
+      border-radius: 50%;
+      width: 32rpx;
+      height: 32rpx;
+      color: #8a8a8a;
+      border: 2rpx solid #8a8a8a;
+    }
+    &Number {
+      min-width: 50rpx;
+      padding: 0 5rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  align-items: center;
+  border-top: 1rpx solid var(--fadeColor);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &Info {
+    display: flex;
+    align-items: center;
+  }
+  &Select {
+    display: flex;
+    align-items: center;
+    &Txt {
+      color: var(--fadeColor);
+      font-size: 24rpx;
+    }
+  }
+  &Total {
+    &Price {
+      color: var(--mainColor);
+      &::before {
+        content: '￥';
+        font-size: 80%;
+      }
+    }
+  }
+  &Btn {
+    background-color: var(--mainColor);
+    color: #fff;
+    font-size: 24rpx;
+    height: 52rpx;
+    border-radius: 52rpx/2;
+    min-width: 150rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.disable {
+      background-color: var(--fadeColor);
+    }
+  }
+}
+
+.cartEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  &Btn {
+    background-color: var(--mainColor);
+    color: #fff;
+    padding: 20rpx 30rpx;
+    border-radius: 100rpx;
+  }
+}

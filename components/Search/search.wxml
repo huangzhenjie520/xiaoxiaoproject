@@ -1,0 +1,9 @@
+<navigator class="search" url="/pages/search/index" open-type="navigate">
+  <view class="searchIn">
+    <icon class="searchIcon" type="search" size="32rpx" color="#767676"></icon>
+      搜索
+  </view>
+    
+</navigator>
+  
+  

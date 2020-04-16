@@ -1,0 +1,18 @@
+<tabs bindgetTabIndex="getTabIndex" tabs="{{ tabs }}" activeIndex="{{ activeIndex }}">
+  <view class="orderList">
+    <view class="orderItem" wx:for="{{ orders }}" wx:key="order_id">
+      <view class="orderItemRow">
+        <text>订单编号</text>
+        <text>{{ item.order_number }}</text>
+      </view>
+      <view class="orderItemRow">
+        <text>订单金额</text>
+        <text class="price">{{ item.order_price }}</text>
+      </view>
+      <view class="orderItemRow">
+        <text>订单日期</text>
+        <text>{{ item.formatTime }}</text>
+      </view>
+    </view>
+  </view>
+</tabs>
